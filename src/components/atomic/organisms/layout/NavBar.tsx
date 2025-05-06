@@ -5,6 +5,12 @@ import Image from 'next/image';
 import { FaInstagram } from 'react-icons/fa6';
 import { IoMenu, IoCloseOutline } from 'react-icons/io5';
 import { useState } from 'react';
+import Social from '../../atoms/Social';
+
+interface Link{
+  name: string,
+  href: string
+}
 
 
 const Navbar = () => {
@@ -17,15 +23,15 @@ const Navbar = () => {
           <Link href={'/'}>
             <Image
               src={''}
-              alt={'Tocano Family Farms Logo'}
+              alt={'Saul Suazo Logo'}
               className='lg:w-20 w-14'
               priority
             />
           </Link>
         </div>
         <div className=' hidden lg:flex items-center '>
-          <div className=''>
-            {links.map((link) => (
+          <div className='mr-6'>
+            {links.nav.map((link: Link) => (
               <Link
                 key={link.name}
                 href={link.href}
@@ -35,9 +41,7 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          <Link href={'https://www.instagram.com/toscanofamilyfarm/'}>
-            <FaInstagram className='text-xl mr-2' />
-          </Link>
+          <Social/>
         </div>
 
         <div className='lg:hidden z-10'>
@@ -71,7 +75,7 @@ const Navbar = () => {
             {/* Navigation Links */}
             <div className='flex flex-col h-3/4 mt-14'>
               <div className='flex flex-col ms-5'>
-                {links.map((link) => (
+                {links.nav.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
@@ -85,9 +89,7 @@ const Navbar = () => {
 
               {/* Social Links */}
               <div className='flex items-center ms-5'>
-                <Link href={'https://www.instagram.com/toscanofamilyfarm/'}>
-                  <FaInstagram className='text-2xl' />
-                </Link>
+                <Social/>
               </div>
             </div>
           </div>

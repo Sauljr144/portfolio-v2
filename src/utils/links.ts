@@ -1,10 +1,23 @@
-const links = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about-us' },
-    { name: 'Products', href: '#products' },
+const nav = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { name: 'Gallery', href: '#gallery' },
-    { name: 'Contact Us', href: '#contact-us' },
-    { name: 'Shop', href: 'https://toscanohotsauce.square.site/' },
+    { name: 'Contact', href: '#contact-us' },
   ];
 
-  export default links
+  const social = [
+    {
+      type: 'github',
+      url:'https://github.com/Sauljr144'
+    },
+    {
+      type: 'linkedin',
+      url:'https://www.linkedin.com/in/saulsuazo/'
+    },
+    {
+      type: 'instagram',
+      url:'https://www.instagram.com/saulsuazojr/'
+    }
+  ]
+
+  export default { nav, social };
