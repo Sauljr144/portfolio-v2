@@ -6,6 +6,7 @@ import { FaInstagram } from 'react-icons/fa6';
 import { IoMenu, IoCloseOutline } from 'react-icons/io5';
 import { useState } from 'react';
 import Social from '../../atoms/Social';
+import logo from '../../../../../public/assets/images/logo.png'
 
 interface Link{
   name: string,
@@ -22,9 +23,9 @@ const Navbar = () => {
         <div>
           <Link href={'/'}>
             <Image
-              src={''}
+              src={logo}
               alt={'Saul Suazo Logo'}
-              className='lg:w-20 w-14'
+              className='lg:w-12 w-10'
               priority
             />
           </Link>

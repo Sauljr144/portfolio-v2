@@ -1,7 +1,6 @@
 const nav = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Gallery', href: '#gallery' },
+    { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact-us' },
   ];
 

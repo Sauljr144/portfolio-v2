@@ -25,7 +25,7 @@ const Social = () => {
   return (
     <>
       {links.social.map((social) => (
-        <Link className='' target='_blank' href={social.url}>
+        <Link key={social.type} className='' target='_blank' href={social.url}>
           {foo(social.type)}
         </Link>
       ))}

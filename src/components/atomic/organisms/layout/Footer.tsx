@@ -3,6 +3,7 @@ import { FaInstagram } from 'react-icons/fa6';
 import links from '@/utils/links';
 import Link from 'next/link';
 import Social from '../../atoms/Social';
+import logo from '../../../../../public/assets/images/logo.png'
 
 const Footer = () => {
   return (
@@ -11,9 +12,9 @@ const Footer = () => {
         <div className='flex justify-center '>
           <Link href={'/'}>
             <Image
-              src={''}
+              src={logo}
               alt={'Saul Suazo Logo'}
-              className='lg:w-20 w-14'
+              className='lg:w-10 w-10'
               priority
             />
           </Link>
