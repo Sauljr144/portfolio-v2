@@ -13,12 +13,11 @@ interface Link{
   href: string
 }
 
-
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <nav className=' bg-white-tan rounded-b-2xl z-10 sticky top-0'>
+    <nav className=' bg-[#0a0a0a] rounded-b-2xl z-10 sticky top-0'>
       <div className='container flex p-4 items-center justify-between mx-auto'>
         <div>
           <Link href={'/'}>
