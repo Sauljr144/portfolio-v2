@@ -6,7 +6,7 @@ import projects from '@/utils/projects';
 
 const CardGrid = () => {
   return (
-    <div className='container p-3 mx-auto scroll-mt-[100px] font-poppins mt-7'>
+    <div id='projects' className='container p-3 mx-auto scroll-mt-[100px] font-poppins mt-7'>
       <h3 className='text-2xl mb-4'>Projects</h3>
       <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4'>
         {projects.map((project, index) => (

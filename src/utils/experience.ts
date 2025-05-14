@@ -20,7 +20,7 @@ const experience = [
         role:'Software Engineer & Filmmaker',
         time:'2014 - Present',
         techStack:['Next.JS', 'Tailwind', 'GitHub', 'Wordpress', 'DaVinci Resolve', 'After Effects'],
-        description:'As a freelancer, I’ve worked across video production and web development to help clients tell their stories and improve their digital presence. My early projects included creating documentaries and short commercials for local businesses and organizations. As my interest in software engineering grew, I shifted into building modern websites using tools like Next.js, Tailwind CSS, Vercel, WordPress, and Figma. I’ve helped clients redesign their websites for better performance and user experience, while also producing videos to promote their services across web and social platforms.',
+        description:'As a freelancer, I’ve worked across video production and web development to help clients tell their stories and improve their digital presence. As a Software Engineer, I have built modern websites using tools like Next.js, Tailwind CSS, Vercel, WordPress, and Figma. I’ve helped clients redesign their websites for better performance and user experience, while also producing videos to promote their services across web and social platforms.',
         url:''
     },
     {

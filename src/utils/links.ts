@@ -1,7 +1,8 @@
 const nav = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact-us' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   const social = [
