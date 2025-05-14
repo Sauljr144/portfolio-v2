@@ -39,7 +39,7 @@ const projects = [
         title:'Portfolio v1',
         techStack:['React', 'Figma'],
         description:'Designed and developed my first personal portfolio to showcase projects and skills using modern, responsive design.',
-        url:''
+        url:'https://lemon-mud-05299121e.4.azurestaticapps.net/'
     },
 
 ]
