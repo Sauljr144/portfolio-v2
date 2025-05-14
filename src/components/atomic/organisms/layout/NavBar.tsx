@@ -2,7 +2,6 @@
 import links from '@/utils/links';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaInstagram } from 'react-icons/fa6';
 import { IoMenu, IoCloseOutline } from 'react-icons/io5';
 import { useState } from 'react';
 import Social from '../../atoms/Social';

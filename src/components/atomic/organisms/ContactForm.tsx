@@ -72,7 +72,7 @@ const ContactForm = () => {
     >
       <div id='contact' className='container p-3 mx-auto scroll-mt-[100px] font-poppins mt-7 text-white lg:px-28'>
         <h3 className='text-center text-3xl mt-8'>Contact</h3>
-        <p className='text-center my-5'>Let's Work Together!</p>
+        <p className='text-center my-5'>Let&apos;s Work Together!</p>
         <Form className='flex flex-col mb-20 font-montserrat'>
           <FormInput
             id='name'

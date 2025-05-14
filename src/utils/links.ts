@@ -5,7 +5,7 @@ const nav = [
     { name: 'Contact', href: '#contact' },
   ];
 
-  const social = [
+const social = [
     {
       type: 'github',
       url:'https://github.com/Sauljr144'
@@ -18,6 +18,7 @@ const nav = [
       type: 'instagram',
       url:'https://www.instagram.com/saulsuazojr/'
     }
-  ]
+  ];
 
-  export default { nav, social };
+  const links = { nav, social }
+  export default links;
