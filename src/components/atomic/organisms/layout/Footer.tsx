@@ -3,7 +3,7 @@ import { FaInstagram } from 'react-icons/fa6';
 import links from '@/utils/links';
 import Link from 'next/link';
 import Social from '../../atoms/Social';
-import logo from '../../../../../public/assets/images/logo.png'
+import logo from '../../../../../public/assets/images/logo.png';
 
 const Footer = () => {
   return (
@@ -32,13 +32,10 @@ const Footer = () => {
             ))}
           </div>
           <div className='flex mb-12'>
-            {/* <Link target="_blank" href={'https://www.instagram.com/saulsuazojr/'}>
-              <FaInstagram className='text-lg lg:text-xl'/>
-            </Link> */}
-            <Social/>
+            <Social />
           </div>
           <p className='font-light text-xs text-center'>
-            Copyright © 2025 Saul Suazo All rights reserved.
+            © 2025 Saul Suazo All rights reserved.
           </p>
         </div>
       </div>
