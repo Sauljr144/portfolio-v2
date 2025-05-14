@@ -8,8 +8,8 @@ const XPGrid = () => {
     <div id='about' className='container p-3 mx-auto scroll-mt-[100px] font-poppins text-white'>
       <div className='flex justify-center my-20'>
         <SplitText
-          text='Writing code and occasionally witty comments.'
-          className='lg:text-6xl text-4xl font-semibold text-center'
+          text={`Writing code and occasionally witty comments.`}
+          className='lg:text-6xl text-4xl font-semibold text-center lg:px-20'
           delay={75}
           animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
           animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
