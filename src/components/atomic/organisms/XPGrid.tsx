@@ -1,6 +1,5 @@
 'use client';
 import experience from '@/utils/experience';
-import Card from '../molecules/Card';
 import SplitText from '../atoms/SplitText';
 import { useState } from 'react';
 import Button from '../atoms/Button';
