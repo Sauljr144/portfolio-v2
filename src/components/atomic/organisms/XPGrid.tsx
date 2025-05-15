@@ -88,36 +88,38 @@ const XPGrid = () => {
           ))}
         </div>
 
-        <div className='hidden lg:flex flex-1'>
+        <div className='flex-1'>
           {/* Desktop View */}
           {openCardIndex != null && (
-            <div className='sticky top-4 p-6 bg-[#111] border-[#222] border-1 rounded-3xl'>
-              <h3 className='text-3xl'>{experience[openCardIndex].role}</h3>
-              <h3 className='text-lg'>{experience[openCardIndex].company}</h3>
-              <h3 className='text-lg'>{experience[openCardIndex].time}</h3>
-              <p className='text-[#b5b5b5a4] lg:text-base md:text-sm my-4'>
-                {experience[openCardIndex].description}
-              </p>
-              <h3 className='mb-3'>Technologies_</h3>
-              {experience[openCardIndex].techStack.map((x, index) => (
-                <button
-                  key={index}
-                  className='border-[#b5b5b5a4] border-1 rounded-3xl px-3 py-1 my-1 mx-1 '
-                >
-                  <ShinyText
-                    text={x}
-                    disabled={false}
-                    speed={3}
-                    className='custom-class text-shadow-md text-xs'
-                  />
-                </button>
-              ))}
+            <div className='hidden lg:flex'>
+              <div className=' sticky top-4 p-6 bg-[#111] border-[#222] border-1 rounded-3xl'>
+                <h3 className='text-3xl'>{experience[openCardIndex].role}</h3>
+                <h3 className='text-lg'>{experience[openCardIndex].company}</h3>
+                <h3 className='text-lg'>{experience[openCardIndex].time}</h3>
+                <p className='text-[#b5b5b5a4] lg:text-base md:text-sm my-4'>
+                  {experience[openCardIndex].description}
+                </p>
+                <h3 className='mb-3'>Technologies_</h3>
+                {experience[openCardIndex].techStack.map((x, index) => (
+                  <button
+                    key={index}
+                    className='border-[#b5b5b5a4] border-1 rounded-3xl px-3 py-1 my-1 mx-1 '
+                  >
+                    <ShinyText
+                      text={x}
+                      disabled={false}
+                      speed={3}
+                      className='custom-class text-shadow-md text-xs'
+                    />
+                  </button>
+                ))}
 
-              <div className='flex justify-end align-bottom mt-4'>
-                <Button
-                  url={experience[openCardIndex].url}
-                  className='bg-white text-black w-[90px] text-center'
-                />
+                <div className='flex justify-end align-bottom mt-4'>
+                  <Button
+                    url={experience[openCardIndex].url}
+                    className='bg-white text-black w-[90px] text-center'
+                  />
+                </div>
               </div>
             </div>
           )}
