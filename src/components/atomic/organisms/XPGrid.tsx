@@ -2,10 +2,31 @@
 import experience from '@/utils/experience';
 import Card from '../molecules/Card';
 import SplitText from '../atoms/SplitText';
+import { useState } from 'react';
+import Button from '../atoms/Button';
+import ShinyText from '../atoms/ShinyText';
 
 const XPGrid = () => {
+  const [openCardIndex, setOpenCardIndex] = useState<number | null>(0);
+  const [openCard, setOpenCard] = useState(true);
+
+  const handleCardClick = (index: number) => {
+    if (openCardIndex === index) {
+      // If clicking the same card, close it
+      setOpenCard(false);
+      setOpenCardIndex(null);
+    } else {
+      // If clicking a different card, open it
+      setOpenCard(true);
+      setOpenCardIndex(index);
+    }
+  };
+
   return (
-    <div id='about' className='container p-3 mx-auto scroll-mt-[100px] font-poppins text-white'>
+    <div
+      id='about'
+      className='container p-3 mx-auto scroll-mt-[100px] font-poppins text-white'
+    >
       <div className='flex justify-center my-20'>
         <SplitText
           text={`Writing code and occasionally witty comments.`}
@@ -18,18 +39,90 @@ const XPGrid = () => {
           onLetterAnimationComplete={() => {}}
         />
       </div>
-      <h3 className='text-2xl mb-4'>Experience</h3>
-      <div className='grid sm:grid-cols-2 lg:grid-cols-2 gap-4'>
-        {experience.map((xp, index) => (
-          <Card key={index} className='custom-spotlight-card'>
-            <h3 className='text-xl'>{xp.role}</h3>
-            <h3 className='text-base'>{xp.company}</h3>
-            <h3 className='text-[#b5b5b5a4] text-sm mb-3'>{xp.time}</h3>
-            <p className='text-[#b5b5b5a4] lg:text-base md:text-sm '>
-              {xp.description}
-            </p>
-          </Card>
-        ))}
+      <h3 className='text-2xl mb-4'>Experience_</h3>
+      <div className='flex lg:flex-row flex-col gap-8 lg:px-20'>
+        <div className='flex flex-col gap-4 flex-1'>
+          {experience.map((xp, index) => (
+            <div key={index}>
+              <div
+                className=' bg-[#111] border-[#222] hover:bg-[#46464666] border-1 rounded-3xl p-6 cursor-pointer'
+                onClick={() => handleCardClick(index)}
+              >
+                <h3 className='text-xl'>{xp.role}</h3>
+                <h3 className='text-base'>{xp.company}</h3>
+                <h3 className='text-[#b5b5b5a4] text-sm'>{xp.time}</h3>
+              </div>
+
+              {/* Mobile View */}
+              {openCard && openCardIndex === index && (
+                <div className='lg:hidden p-6 bg-[#111] border-[#222] border-1 rounded-3xl mt-4'>
+                  <h3 className='text-3xl'>{xp.role}</h3>
+                  <h3 className='text-lg'>{xp.company}</h3>
+                  <h3 className='text-lg'>{xp.time}</h3>
+                  <p className='text-[#b5b5b5a4] lg:text-base md:text-sm my-4'>
+                    {xp.description}
+                  </p>
+                  <h3 className='mb-3'>Technologies_</h3>
+                  {xp.techStack.map((x, index) => (
+                    <button
+                      key={index}
+                      className='border-[#b5b5b5a4] border-1 rounded-3xl px-3 py-1 my-1 mx-1 '
+                    >
+                      <ShinyText
+                        text={x}
+                        disabled={false}
+                        speed={3}
+                        className='custom-class text-shadow-md text-xs'
+                      />
+                    </button>
+                  ))}
+
+                  <div className='flex justify-end align-bottom mt-4'>
+                    <Button
+                      url={xp.url}
+                      className='bg-white text-black w-[90px] text-center'
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className='hidden lg:flex flex-1'>
+          {/* Desktop View */}
+          {openCardIndex != null && (
+            <div className='sticky top-4 p-6 bg-[#111] border-[#222] border-1 rounded-3xl'>
+              <h3 className='text-3xl'>{experience[openCardIndex].role}</h3>
+              <h3 className='text-lg'>{experience[openCardIndex].company}</h3>
+              <h3 className='text-lg'>{experience[openCardIndex].time}</h3>
+              <p className='text-[#b5b5b5a4] lg:text-base md:text-sm my-4'>
+                {experience[openCardIndex].description}
+              </p>
+              <h3 className='mb-3'>Technologies_</h3>
+              {experience[openCardIndex].techStack.map((x, index) => (
+                <button
+                  key={index}
+                  className='border-[#b5b5b5a4] border-1 rounded-3xl px-3 py-1 my-1 mx-1 '
+                >
+                  <ShinyText
+                    text={x}
+                    disabled={false}
+                    speed={3}
+                    className='custom-class text-shadow-md text-xs'
+                  />
+                </button>
+              ))}
+
+              <div className='flex justify-end align-bottom mt-4'>
+                <Button
+                  url={experience[openCardIndex].url}
+                  className='bg-white text-black w-[90px] text-center'
+                />
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
