@@ -1,10 +1,18 @@
 const experience = [
     {
+        company:'Sharp Software Services',
+        role:'Software Engineer Intern',
+        time:'2025 - Present',
+        techStack:['React','Tailwind','TypeScript','GitHub'],
+        description:'Contributed to the development and maintenance of the company website and internal projects by implementing new features and fixing bugs. Actively participated in team meetings, sprint planning, and backlog grooming sessions, gaining hands-on experience in agile development and cross-functional collaboration.',
+        url:'https://www.sharpsoftware.net/'
+    },
+    {
         company:'CodeStack',
         role:'Multimedia Specialist',
         time:'2019 - Present',
         techStack:['DaVinci Resolve', 'After Effects', 'Blender','HTML', 'CSS', 'BootStrap', 'Next.JS', 'Tailwind', 'Azure DevOps'],
-        description:'At CodeStack, the software development division of the San Joaquin County Office of Education, I’ve worked as a Multimedia Specialist focused on storytelling and digital media. My work spans short documentaries, community spotlights, commercials, livestreams, and event photography. A featured project is the annual 3D animated intro video I create in Blender for the CodeStack Conference, viewed by nearly 1,000 attendees each year. I’ve also contributed to several internal web projects, assisting on the frontend side and collaborating through Azure DevOps.',
+        description:'At CodeStack, the software development division of the San Joaquin County Office of Education, I’ve worked as a Multimedia Specialist focused on storytelling and digital media. My work spans short documentaries, commercials, livestreams, and event photography. I’ve also contributed to several internal web projects, assisting on the frontend and backend.',
         url:'https://www.codestack.org/'
     },
     {
