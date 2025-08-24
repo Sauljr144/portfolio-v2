@@ -15,7 +15,7 @@ const projects = [
         title:'Floral Story By Heidi',
         techStack:['Next.JS','TypeScript', 'Vercel', 'Figma'],
         description:'This project is in progress. I designed the website with a modern and clean look. It is currently in development.',
-        url:''
+        url:'https://floralstory.vercel.app/'
     },
     {
         title:'Wine Wizards',
